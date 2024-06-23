@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>updataBok</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+
+        <label for="title_name">title_name:</label>
+        <input type="text" id="title_name" name="title_name" required>
+<br><br>
+        <label for="author_name">author_name:</label>
+        <input type="text" id="author_name" name="author_name" required>
+<br><br>
+        <label for="category_name">Price Per Night:</label>
+        <input type="text" id="category_name" name="category_name" required>
+<br><br>
+        <label for="description_name">Room Description:</label>
+        <textarea id="description_name" name="description_name" required></textarea>
+<br><br>
+        <button>SAVE</button>
+    <a href=" {% url 'displayBook' %} ">beack</a>
+</form>
+</body>
+</html>

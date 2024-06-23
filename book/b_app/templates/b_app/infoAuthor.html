@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AUTHOR</title>
+</head>
+<body>
+    <div>
+        >>>>>>>>>><h2>AUTHOR</h2><<<<<<<<<<
+            <ul>
+                <li>
+                    <h1>имя  автора - {{ authors.name }}</h1>
+                    <br><br>
+                    фото автор - <img width="90px" height="90px" src="{{ author.image.url }}" alt="">
+                    <br><br>
+                    его биография - {{ authors.bio }}
+                    <br><br>
+                    <a  href="{% url 'displayBook' %}">>>ВЫХОД<<</a>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        >>>>>>>>>><h2>BOOK</h2><<<<<<<<<<
+            <ul>
+                <li>
+                    <h1>название книги - {{ books.title }}</h1>
+                    <br><br>
+                    название автор - {{ books.author }}
+                    <br><br>
+                    название категории - {{ books.category }}
+                    <br><br>
+                    название описание - {{ books.description }}
+                    <br><br>
+                    <a  href="{% url 'displayBook' %}">>>ВЫХОД<<</a>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

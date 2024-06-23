@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create book</title>
+</head>
+<body>
+<form action="{% url 'createBook' %}" method="POST">
+    {% csrf_token %}
+
+    <label for="title">title:</label>
+    <input  type="text" id="title" name="title">
+    <br><br>
+    <label for="author_name">author:</label>
+    <input type="text" id="author_name" name="author">
+    <br><br>
+    <label for="category">category:</label>
+    <input type="text" id="category" name="category">
+    <br><br>
+    <label for="description">description:</label>
+    <input type="text" id="description" name="description">
+    <br>
+    <button type="submit">сoздать</button>
+    <a  href="{% url 'displayBook' %}">>>ВЫХОД<<</a>
+
+</form>
+</body>
+</html>

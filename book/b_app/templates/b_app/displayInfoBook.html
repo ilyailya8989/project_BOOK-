@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DISPLAY INFO</title>
+</head>
+<body>
+<h1>ГЛАВНАЯ</h1>
+
+<div class="osnovCont">
+
+    <div class="contBook">
+        <h2>BOOK</h2>
+        <a href="{% url 'createBook' %}">добавть книгу</a>
+    {% for book in books %}
+
+        <a href=" {% url 'infoBook' book_id=book.id %}">
+            <ul>
+                <li>
+                    название книги  ({{ book.title }})<br>
+                    <a href="{% url 'deleteBook' book.id %}">удалить</a>
+                    <a href="{% url 'updataBook' %}">обновть</a>
+                </li>
+            </ul>
+        </a>
+    {% endfor %}
+    </div>
+
+    <div class="contCategory">
+        <h2>CATEGORY</h2>
+        <a href="{% url 'creteCategory' %}">добавть cat</a>
+            {% for category in categories %}
+        <a href="{% url 'displayCategory' category.id %}">
+            <ul>
+                <li>
+                    название категории - {{ category.name }}
+                    <a href="{% url 'deleteCategory' category.id %}">удалить</a>
+                    <a href="{% url 'updateCategory' %}">обновть</a>
+                </li>
+            </ul>
+        </a>
+    {% endfor %}
+
+
+    </div>
+
+    <div class="contAutor">
+        <h2>AUTHORS</h2>
+    {% for author in authors %}
+        <a href="{% url 'displayAutor' author.id %}">
+            <ul>
+                <li>
+                    название автора - {{ author.name }}
+                    <a href="{% url 'infoAuthor' author.id %}">(__биография__)</a>
+                </li>
+            </ul>
+        </a>
+    {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>
